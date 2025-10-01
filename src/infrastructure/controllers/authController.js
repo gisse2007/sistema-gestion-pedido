@@ -11,7 +11,7 @@ import AuthRepositoryMongo from "../repositories/AuthRepositoryMongo.js";
 const authRepository = new AuthRepositoryMongo();
 
 const JWT_SECRET = process.env.JWT_SECRET || "supersecretkey";
-const JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN || "5minutes";
+const JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN || "1d";
 
 class authController {
   async register(req, res) {
